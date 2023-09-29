@@ -217,7 +217,7 @@ if(sort) {
     sortClear.addEventListener("click", () => {
         url.searchParams.delete("sortKey");
         url.searchParams.delete("sortValue");
-    
+
         window.location.href = url.href;
 
     })

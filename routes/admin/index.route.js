@@ -12,6 +12,7 @@ module.exports = (app) => {
 
   app.use(PATH_ADMIN + "/products", productRoutes);
 
+  
   app.use(PATH_ADMIN + "/products-category", productCategoryRoutes);
 
 }

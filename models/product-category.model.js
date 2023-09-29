@@ -1,5 +1,5 @@
 const mongoose = require("mongoose");
-const slug = require('mongoose-slug-updater');
+const slug = require("mongoose-slug-updater");
 
 
 mongoose.plugin(slug)
@@ -24,7 +24,7 @@ const productCategorySchema = new mongoose.Schema(
             default: false
         }, 
         deletedAt: Date
-         
+
     }, 
     {
         timestamps: true    
@@ -34,4 +34,4 @@ const productCategorySchema = new mongoose.Schema(
 
 const ProductCategory = mongoose.model("ProductCategory", productCategorySchema, "products-category");
 
-module.exports = ProductCategory;   
+module.exports = ProductCategory; 
