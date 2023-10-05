@@ -1,4 +1,4 @@
-var md5 = require('md5');
+const md5 = require('md5');
 const Account = require("../../models/account.model")
 const Role = require("../../models/role.model")
 
@@ -84,15 +84,15 @@ module.exports.edit = async (req, res) => {
         roles: roles,
       });
     } catch (error) {
-      res.redirect(`/${systemConfig.prefixAdmin}/accounts`);
+      res.redirect(`${systemConfig.prefixAdmin}/accounts`);
     }
 };
 
-// [PATCH] /admin/accounts/create
+// [PATCH] /admin/accounts/edit/:id
 module.exports.editPatch = async (req, res) => {
     const id = req.params.id;
     const emailExist = await Account.findOne({
-         
+        _id: {$ne: id},
         email: req.body.email,
         deleted: false
     })
