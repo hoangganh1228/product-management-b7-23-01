@@ -15,6 +15,7 @@ const productSchema = new mongoose.Schema(
         discountPercentage: Number,
         stock: Number,
         thumbnail: String,
+        featured: String,
         status: String,
         position: Number,
         slug: {
@@ -29,6 +30,13 @@ const productSchema = new mongoose.Schema(
                 default: Date.now
             }
         },
+        updatedBy: [
+            {
+                account_id: String,
+                updatedAt: Date
+
+            }
+        ],
         deleted: {
             type: Boolean,
             default: false
@@ -38,6 +46,7 @@ const productSchema = new mongoose.Schema(
             account_id: String,
             deletedAt: Date
         },
+        
     }, 
     {
         timestamps: true    
