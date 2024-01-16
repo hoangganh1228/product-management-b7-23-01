@@ -18,7 +18,8 @@ module.exports.index = async (req, res) => {
 });
 // End SocketIO  
   
-  res.render("client/pages/chat/index", {
+  
+res.render("client/pages/chat/index", {
       pageTitle: "Chat",
     });
   };
