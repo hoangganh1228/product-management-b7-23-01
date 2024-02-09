@@ -3,6 +3,7 @@ const Role = require("../../models/role.model")
 
 const systemConfig = require("../../config/system")
 
+
 module.exports.requireAuth = async (req, res, next) => {
     console.log(req.cookies.token);
     if(!req.cookies.token) {
