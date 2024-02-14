@@ -1,5 +1,6 @@
 module.exports = (objectPagination, query, countProducts) => {
-    if(query.page) {
+    
+  if(query.page) {
       objectPagination.currentPage = parseInt(query.page);
     }
   
